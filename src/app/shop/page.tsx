@@ -26,7 +26,7 @@ const PRODUCTS_PER_PAGE = 9;
 type SortOption = "most-popular" | "low-price" | "high-price";
 
 async function getProducts(sort?: SortOption) {
-  const baseQuery = `*[_type == "products"]`;
+  const baseQuery = `*[_type == "product"]`; // Corrected type name
   
   let sortPart = '';
   switch (sort) {
@@ -48,7 +48,8 @@ async function getProducts(sort?: SortOption) {
     discountPercent,
     "new": new,
     colors,
-    sizes
+    sizes,
+    category // Ensure category is fetched
   }`;
 
   const products = await client.fetch(query);
