@@ -9,7 +9,7 @@ import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Shopco",
-  description: "NextGeneration E-Commerce Platform by Farah Asghar",
+  description: "NextGeneration E-Commerce Platform by Farah ",
 };
 
 export const viewport: Viewport = {
